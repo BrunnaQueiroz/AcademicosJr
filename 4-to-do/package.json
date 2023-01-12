@@ -1,0 +1,17 @@
+{
+  "name": "4-to-do",
+  "version": "1.0.0",
+  "description": "- **Núcleo:** Web\r - **Data da Atividade:** 07/10/2022\r - **Data de Entrega:** 14/10/2022\r - **Orientadores:** [João Fernades](https://gitlab.com/joaofernandesufba) e [Luiz Valverde](https://gitlab.com/luiz2003)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.2"
+  }
+}
