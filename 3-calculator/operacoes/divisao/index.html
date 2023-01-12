@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Meu app</title>    
+        <script>
+            function div(){
+                var num1 = document.getElementById("n1").value;                
+                var num2 = document.getElementById("n2").value;
+                var res = document.getElementById("res");
+                num1 = parseFloat(num1)
+                num2 = parseFloat(num2)                
+                /*res.innerHTML= "A divisão "+num1+" / "+num2+" = "+(num1/num2);*/
+                resposta = "A divisão "+num1+" / "+num2+" = "+(num1/num2);
+                alert(resposta)
+
+            }
+        </script>
+    </head>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        border: none;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #FEE7AA;
+            align-items: center;
+            padding-top: 160px;
+        }
+
+        main {
+            background-color: #352020;
+            width: 380px;
+            height: 422px;    
+            border-radius: 5px;        
+        }
+
+        .inputs {
+            display: flex;
+            background-color: white;
+            margin-left: 40px;
+            margin-right: 35px;
+            margin-top: 22px;
+            border-radius: 4px;
+            flex-direction: column;
+            width: 259px;
+            height: 76px;                 
+            border-color: black;                        
+            padding: 20px; 
+            margin-bottom: 30px;                               
+        }
+
+        #n1, #n2 {
+            background-color: #352020;
+            height: 90px;                         
+            color: white; 
+            text-align: center;                        
+        }
+
+        .botoes {
+            display: flex;
+            flex-direction: column;
+            padding-left: 22px;
+        }
+        
+        .soma-e-sub, .multi-e-div {
+            display: flex;
+            flex-direction: row;
+            gap: 56px;
+            padding: 20px;
+            padding-left: 70px;
+
+        }
+
+        .botao {            
+            width: 67px;
+            height: 63px;            
+        }
+
+        p {
+            font-size: 50px;
+        }
+
+        #x {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #div {
+            cursor: pointer;
+        }
+
+    </style>
+    <body>
+        <main>
+            <div class="inputs">
+                <input type='number' id="n1" placeholder="Digite um número"> <br>
+                <input type='number' id="n2" placeholder="Digite um número">  <br>
+            </div>
+            <div class="botoes">
+                <div class="soma-e-sub">
+                    <button onclick="soma()" class="botao" id="soma"><p>+</p></button>
+                    <button onclick="sub()" class="botao" id="sub"><p>-</p></button>
+                </div>
+                <div class="multi-e-div">
+                    <button onclick="multi()" class="botao" id="multi"><p id="x" >X</p></button>
+                    <button onclick="div()" class="botao" id="div"><p>÷</p></button>
+                </div>
+            </div>            
+            <div id="res"></div>
+        </main>     
+    </body>
+</html>
