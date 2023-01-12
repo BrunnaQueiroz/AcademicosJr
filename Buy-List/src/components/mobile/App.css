@@ -1,0 +1,43 @@
+
+*{
+    padding: none;
+    border: none;
+    margin: 0;
+}
+
+body {
+    display: flex;
+}
+
+h1 {
+    color: white;
+}
+
+
+.head {
+    display: flex;    
+    align-items: center;    
+    justify-content: center;
+    justify-content: space-around;
+    background-color: #5E3E5C;        
+    width: 100vw;    
+}
+
+#img {
+    cursor: pointer;
+}
+
+#botao {
+    display: flex;
+    justify-content: center;    
+    padding-bottom: 60px;
+}
+
+.estilo {
+   
+}
+
+
+
+
+

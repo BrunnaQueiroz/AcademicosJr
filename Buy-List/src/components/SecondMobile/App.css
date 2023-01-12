@@ -1,0 +1,32 @@
+
+.AppII {
+    width: 50vw;
+    height: 100vh;
+    margin-left: -4.2%;
+    
+    
+}
+
+.headII {        
+    width: 79vw;        
+    display: flex;    
+    align-items: center;    
+    justify-content: center;
+    justify-content: space-around;        
+    background-color: #5E3E5C;        
+        
+}
+
+#ponta {
+    width: 79vw;
+    height: 10vh;
+    
+}
+
+#botaoMobile {
+    margin-left: 30%;    
+}
+
+#corpo {
+    
+}

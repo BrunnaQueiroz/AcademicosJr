@@ -1,0 +1,50 @@
+
+*{
+    padding: none;
+    border: none;
+    margin: 0;
+}
+
+body {
+    display: flex;
+}
+
+h1 {
+    color: white;
+}
+
+.AppY {    
+    /*background-image: url('../../../imgs/lapis.jpg');*/
+    background-image: url('../../../imgs/LapisGrandeI.jpg');
+    background-size: cover;    
+    height: 100vh;
+}
+
+.headY {
+    display: flex;    
+    align-items: center;    
+    justify-content: center;
+    justify-content: space-around;
+    background-color: #5E3E5C;        
+    width: 100vw;    
+}
+
+#img {
+    cursor: pointer;
+}
+
+#botao {
+    display: flex;
+    justify-content: center;    
+    padding-bottom: 60px;
+}
+.lista_mobi{
+    
+}
+
+
+
+
+
+
+
