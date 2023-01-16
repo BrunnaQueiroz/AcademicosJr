@@ -6,24 +6,16 @@ import {Link, Routes, Route} from "react-router-dom";
 import First_desk from "./pages/first_page";
 import Mobile_Yellow from "../src/components/MobileYellow/MobileYellow";
 
-
-
-
-
   function App() {    
 
-
-    
-  return ( 
-    <div className="App">
-      <Routes>
-        <Route path='/' element={<First_desk/> }/>
-        <Route path='/lista' element={<Second_desk/> }/>
-        <Route path='/mobiyellow' element={<Mobile_Yellow/>}/>
-      </Routes>
-    </div>
-      
-      
+    return ( 
+      <div className="App">
+        <Routes>
+          <Route path='/' element={<First_desk/> }/>
+          <Route path='/lista' element={<Second_desk/> }/>
+          <Route path='/mobiyellow' element={<Mobile_Yellow/>}/>
+        </Routes>
+      </div>            
   )
 };
 
