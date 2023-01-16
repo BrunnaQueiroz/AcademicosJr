@@ -4,7 +4,7 @@ import './MeetingRoom.css'
 import { Provider } from 'react-redux'
 import store from '../../store'
 /*import { connect } from 'react-redux'*/
-import buscaVideo from '../../store/actions/searchAC'
+/*import buscaVideo from '../../store/actions/searchAC'*/
 
 
 export default function MeetingRoom () {
