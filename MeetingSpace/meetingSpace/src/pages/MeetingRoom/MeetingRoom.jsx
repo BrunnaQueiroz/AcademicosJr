@@ -3,13 +3,13 @@ import image from '../../assets/youtube.png'
 import './MeetingRoom.css'
 import { Provider } from 'react-redux'
 import store from '../../store'
-/*import { connect } from 'react-redux'*/
-/*import buscaVideo from '../../store/actions/searchAC'*/
+import { connect } from 'react-redux'
+import buscaVideo from '../../store/actions/searchAC'
 
 
 export default function MeetingRoom () {
     
-    /*connect (null, mapDispatchToProps)*/
+    
     
     const buscaInput = (e) => {
         if(e.keyCode === 13) {
@@ -20,13 +20,14 @@ export default function MeetingRoom () {
         
     }
 
-    /*const mapDispatchToProps = (dispatch) => {
+    const mapDispatchToProps = (dispatch) => {
+        connect (null, mapDispatchToProps)
         return {
             buscaVideo: (params) => dispatch (
                 buscaVideo(params)
             ) 
         }
-    }*/
+    }
 
     return (
         <div className="allContents">    
@@ -34,7 +35,7 @@ export default function MeetingRoom () {
                 <section className="allVideoContents">
                     <div className="welcome">
                         <h1>Welcome, fulano - DEFINITIVA</h1>
-                        <p>ID da sala: 123456</p>
+                        <p>ID da sala: 123456</p>                        
                     </div>
                     <div className="search">
                         <input type="text" placeholder='Search' 
