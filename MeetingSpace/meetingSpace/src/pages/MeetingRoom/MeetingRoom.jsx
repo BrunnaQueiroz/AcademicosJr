@@ -4,11 +4,13 @@ import './MeetingRoom.css'
 import { Provider } from 'react-redux'
 import store from '../../store'
 import { connect } from 'react-redux'
-import buscaVideo from '../../store/actions/searchAC'
+/*import buscaVideo from '../../store/actions/searchAC'*/
+import Chat from '../../services/Chat'
 
 
-export default function MeetingRoom () {
+ /*function MeetingRoom () {*/
     
+ export default function MeetingRoom () {
     
     
     const buscaInput = (e) => {
@@ -21,12 +23,13 @@ export default function MeetingRoom () {
     }
 
     const mapDispatchToProps = (dispatch) => {
-        connect (null, mapDispatchToProps)
+        
         return {
             buscaVideo: (params) => dispatch (
                 buscaVideo(params)
             ) 
         }
+        /*connect(null, mapDispatchToProps)*/
     }
 
     return (
@@ -80,9 +83,12 @@ export default function MeetingRoom () {
                 </section>
 
                 <section className="chatBox">
-                
+                    <Chat />
                 </section>
             </Provider>     
-        </div>
+        </div> 
     )
+
 }
+
+/*export default connect(null, mapDispatchToProps) (MeetingRoom)*/
