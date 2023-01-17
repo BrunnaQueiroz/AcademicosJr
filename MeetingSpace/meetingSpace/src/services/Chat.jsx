@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import io from 'socket.io-client'
-/*import uuid from 'uuidv4'*/
-/*import { uuid } from 'uuidv4'*/
+/*import { uuid } from 'uuid'*/
+import { v4 as uuid } from 'uuid'
+/*import { uuid } from 'uuid/dist/v4'*/
+/*import uuid from 'uuidv4/package.json'*/
 
 /*const myId = uuid()*/
+const myId = uuid
 const socket = io('http://localhost8080')
 socket.on('connect', () => console.log('[IO] Connect => A new connection has been estabilished'))
 
