@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import io from 'socket.io-client'
+/*import uuid from 'uuidv4'*/
+/*import { uuid } from 'uuidv4'*/
 
-const socket = io('http://localhost:8080')
+/*const myId = uuid()*/
+const socket = io('http://localhost8080')
 socket.on('connect', () => console.log('[IO] Connect => A new connection has been estabilished'))
 
 import './Chat.css'
@@ -13,6 +16,12 @@ export default function Chat () {
 
     const [messages, setMessages] = useState ([])
 
+    useEffect(() => {
+        const handleNewMessage = newMessage =>
+            setMessages([ ...messages, newMessage])
+        socket.on("chat.message", handleNewMessage)
+        return () => socket.off("chat.message", handleNewMessage)
+    }, [])
     
     /*It serves to prevent the browser from reloading*/
     const handleFormSubmit = event => {
@@ -20,10 +29,10 @@ export default function Chat () {
         if (message.trim()) {
             /*Selects all previous messages, create a new array and
             adding the last message*/
-            setMessages([ ...messages, {
+            socket.emit('chat.message', {
                 id: 1,
                 message
-            }])
+            })
             setMessage('')
         }
     }
@@ -37,11 +46,12 @@ export default function Chat () {
             <section className="container">
                 <ul className="list">
                     { messages.map(m => (
-                        <li className="list__item list__item--mine">
-                        {/*Modo BEM (Block Element Modifier de nomear classes*/}
-                            <span 
-                            className="message message--mine" 
+                        <li 
+                            className="list__item list__item--mine"
                             key={m.id}>
+                            {/*Modo BEM (Block Element Modifier de nomear classes*/}
+                            <span 
+                            className="message message--mine" >
                                 { m.message }
                             </span>
                         </li> 
