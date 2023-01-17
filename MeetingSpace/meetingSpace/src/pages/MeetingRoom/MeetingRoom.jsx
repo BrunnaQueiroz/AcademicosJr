@@ -11,8 +11,7 @@ import Chat from '../../services/Chat'
  /*function MeetingRoom () {*/
     
  export default function MeetingRoom () {
-    
-    
+        
     const buscaInput = (e) => {
         if(e.keyCode === 13) {
             const valor = e.target.value
@@ -83,7 +82,7 @@ import Chat from '../../services/Chat'
                 </section>
 
                 <section className="chatBox">
-                    <Chat />
+                    {/*<Chat />*/}
                 </section>
             </Provider>     
         </div> 
