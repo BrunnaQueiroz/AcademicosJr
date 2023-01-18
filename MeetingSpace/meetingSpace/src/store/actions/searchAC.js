@@ -1,12 +1,16 @@
 import youtubeSearch from 'youtube-api-v3-search'
 
-import YTApi from '../../services/api'
+/*import YTApi from '../../services/api'*/
 
 import API_KEY from '../../services/api'
 
-const API_KEY = YTApi
+/*const API_KEY = YTApi*/
+
 
 export const searchVideo = (params) => {
+
+    
+
     return dispatch => {
         dispatch(searchVideoStart())
         youtubeSearch(API_KEY, {q: params})
