@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import './Login.css'
 import {db} from './firebase-config'
 import { collection, getDocs, addDoc } from 'firebase/firestore'
+import { Link } from "react-router-dom";
 
 export default function Login() {
 
@@ -35,7 +36,7 @@ export default function Login() {
             onChange={(event) => {setNewName(event.target.value)}}/>
             <input type="number" placeholder="ID" 
             onChange={(event) => {setNewRoom(event.target.value)}}/>
-            <button onClick={createRoom}> Create Room </button>
+            <button onClick={createRoom} > Create Room </button>
             <div> 
                 {users.map((user) => { 
                     return  (
