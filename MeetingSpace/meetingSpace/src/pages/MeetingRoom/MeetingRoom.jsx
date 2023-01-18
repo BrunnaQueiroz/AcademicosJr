@@ -8,10 +8,7 @@ import { connect } from 'react-redux'
 import { buscaVideo } from '../../store/actions/searchAC'
 import Chat from '../../services/Chat'
 
- /*function MeetingRoom () {*/
-    
-
-
+ /*function MeetingRoom () {*/    
 
  export default function MeetingRoom () {
             
@@ -32,7 +29,8 @@ import Chat from '../../services/Chat'
             ) 
         }
         /*connect(null, mapDispatchToProps)*/
-    }
+    }    
+    
 
     return (
         <div className="allContents">    
@@ -40,7 +38,7 @@ import Chat from '../../services/Chat'
 
                 <section className="allVideoContents">
                     <div className="welcome">
-                        <h1>Welcome, fulano - DEFINITIVA</h1>
+                        <h1>Welcome, fulana - DEFINITIVA</h1>
                         <p>ID da sala: 123456</p>                        
                     </div>
                     <div className="search">
@@ -48,7 +46,7 @@ import Chat from '../../services/Chat'
                         onKeyDown={(e) => this.buscaInput(e)}/>
                     </div>
                     <div className="videoReproduction">
-                        <video loop autoPlay src={video}></video>
+                        <video loop autoPlay src={video} height={"100%"}></video>                        
                     </div>
                     <div className="videosSuggestions">
                         <div className="firstSuggestion">
@@ -87,7 +85,7 @@ import Chat from '../../services/Chat'
                 </section>
 
                 <section className="chatBox">
-                    {/*<Chat />*/}
+                    <Chat />
                 </section>
             </Provider>     
         </div> 
