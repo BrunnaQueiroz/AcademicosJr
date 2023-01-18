@@ -1,47 +1,43 @@
 import React, { useEffect, useState } from 'react'
-import io from 'socket.io-client'
-/*import { uuid } from 'uuid'*/
+/*import io from 'socket.io-client'
 import { v4 as uuid } from 'uuid'
-/*import { uuid } from 'uuid/dist/v4'*/
-/*import uuid from 'uuidv4/package.json'*/
-
-/*const myId = uuid()*/
 const myId = uuid
 const socket = io('http://localhost8080')
 socket.on('connect', () => console.log('[IO] Connect => A new connection has been estabilished'))
 
-import './Chat.css'
+import './Chat.css'*/
 
 
 export default function Chat () {
 
     const [message, setMessage] = useState('')
-
     const [messages, setMessages] = useState ([])
 
-    useEffect(() => {
+    /*useEffect(() => {
         const handleNewMessage = newMessage =>
             setMessages([ ...messages, newMessage])
         socket.on("chat.message", handleNewMessage)
         return () => socket.off("chat.message", handleNewMessage)
-    }, [])
+    }, [])*/
     
     /*It serves to prevent the browser from reloading*/
     const handleFormSubmit = event => {
         event.preventDefault()
         if (message.trim()) {
+            setMessage([... messages, message])
             /*Selects all previous messages, create a new array and
             adding the last message*/
-            socket.emit('chat.message', {
+            /*socket.emit('chat.message', {
                 id: 1,
                 message
             })
+            setMessage('')*/
             setMessage('')
         }
     }
 
     const handleInputChange = event => 
-    setMessage(event.target.value)
+        setMessage(event.target.value)
 
     return (
         <div className="Chat">
@@ -58,7 +54,7 @@ export default function Chat () {
                                 { m.message }
                             </span>
                         </li> 
-                    )) }                                                               
+                    )) }                                                                                      
                     <form className="form" onSubmit={handleFormSubmit}>
                         <input className="form__field" 
                         placeholder='Type a message'
