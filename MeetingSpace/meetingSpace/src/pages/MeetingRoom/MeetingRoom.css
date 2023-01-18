@@ -47,3 +47,8 @@ input {
     gap: 10px;    
     font-size: 80%;    
 }
+
+video {
+    width: 75vw;
+
+}
