@@ -1,8 +1,8 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 /*import { configureStore } from '@reduxjs/toolkit'*/
 import thunk from 'redux-thunk'
-import logger from 'redux-logger'
 
+import logger from 'redux-logger'
 
 import reducers from './actions/reducers/index'
 
