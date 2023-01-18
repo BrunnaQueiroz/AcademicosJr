@@ -3,16 +3,18 @@ import image from '../../assets/youtube.png'
 import './MeetingRoom.css'
 import { Provider } from 'react-redux'
 import store from '../../store'
+import video from '../../assets/MotionVideo.mp4'
 import { connect } from 'react-redux'
 import { buscaVideo } from '../../store/actions/searchAC'
 import Chat from '../../services/Chat'
 
  /*function MeetingRoom () {*/
     
- export default function MeetingRoom () {
-        
 
-    
+
+
+ export default function MeetingRoom () {
+            
     const buscaInput = (e) => {
         if(e.keyCode === 13) {
             const valor = e.target.value
@@ -46,7 +48,7 @@ import Chat from '../../services/Chat'
                         onKeyDown={(e) => this.buscaInput(e)}/>
                     </div>
                     <div className="videoReproduction">
-                        
+                        <video loop autoPlay src={video}></video>
                     </div>
                     <div className="videosSuggestions">
                         <div className="firstSuggestion">
