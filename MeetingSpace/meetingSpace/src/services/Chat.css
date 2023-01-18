@@ -1,3 +1,7 @@
+* {
+  list-style: none;
+}
+
 .list {
     margin: 0;
     padding: 1rem;
@@ -9,6 +13,8 @@
   
   .list__item.list__item--mine {
     text-align: right;
+    list-style: none;
+
   }
 
   .message {
