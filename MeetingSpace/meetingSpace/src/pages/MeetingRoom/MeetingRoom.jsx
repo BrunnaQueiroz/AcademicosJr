@@ -12,13 +12,12 @@ import Chat from '../../services/Chat'
  export default function MeetingRoom () {
         
 
-    const [valueInput, setValueInput] = useState()
     
     const buscaInput = (e) => {
         if(e.keyCode === 13) {
-            const valueInput = e.target.value
-            console.log(valueInput)
-            this.props.buscaVideo(valueInput)
+            const valor = e.target.value
+            console.log(valor)
+            this.props.buscaVideo(valor)
         }
         
     }
