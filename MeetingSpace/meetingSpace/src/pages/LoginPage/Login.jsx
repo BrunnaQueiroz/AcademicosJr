@@ -32,14 +32,14 @@ export default function Login() {
 
     return (
         <div className="form">
-            <input type="text" placeholder="Name" 
+            <input required type="text" placeholder="Name" 
             onChange={(event) => {setNewName(event.target.value)}}/>
-            <input type="number" placeholder="ID" 
+            <input required type="number" placeholder="ID" 
             onChange={(event) => {setNewRoom(event.target.value)}}/>
-            <button onClick={createRoom} > Create Room </button>
+            <Link to={'/Room'}><button onClick={createRoom}> Create Room </button></Link>
             <div> 
-                {users.map((user) => { 
-                    return  (
+                {users.map((user) => {                                       
+                    return  (                       
                     <div> 
                         <h1> Name: {user.name} </h1> 
                         <h2> ID: {user.IdRoom} </h2>
