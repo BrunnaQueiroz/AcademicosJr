@@ -4,19 +4,21 @@ import './MeetingRoom.css'
 import { Provider } from 'react-redux'
 import store from '../../store'
 import { connect } from 'react-redux'
-/*import buscaVideo from '../../store/actions/searchAC'*/
+import { buscaVideo } from '../../store/actions/searchAC'
 import Chat from '../../services/Chat'
-
 
  /*function MeetingRoom () {*/
     
  export default function MeetingRoom () {
         
+
+    const [valueInput, setValueInput] = useState()
+    
     const buscaInput = (e) => {
         if(e.keyCode === 13) {
-            const valor = e.target.value
-            console.log(valor)
-            this.props.buscaVideo(valor)
+            const valueInput = e.target.value
+            console.log(valueInput)
+            this.props.buscaVideo(valueInput)
         }
         
     }
@@ -34,6 +36,7 @@ import Chat from '../../services/Chat'
     return (
         <div className="allContents">    
             <Provider store={store}>
+
                 <section className="allVideoContents">
                     <div className="welcome">
                         <h1>Welcome, fulano - DEFINITIVA</h1>
@@ -41,9 +44,10 @@ import Chat from '../../services/Chat'
                     </div>
                     <div className="search">
                         <input type="text" placeholder='Search' 
-                        onKeyDown={buscaInput}/>
+                        onKeyDown={(e) => this.buscaInput(e)}/>
                     </div>
                     <div className="videoReproduction">
+                        
                     </div>
                     <div className="videosSuggestions">
                         <div className="firstSuggestion">
