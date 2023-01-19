@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-/*import io from 'socket.io-client'
+import io from 'socket.io-client'
 import { v4 as uuid } from 'uuid'
 const myId = uuid
-const socket = io('http://localhost8080')
+const socket = io('http://localhost3000')
 socket.on('connect', () => console.log('[IO] Connect => A new connection has been estabilished'))
 
-import './Chat.css'*/
+import './Chat.css'
 
 
 export default function Chat () {
@@ -27,11 +27,11 @@ export default function Chat () {
             setMessage([... messages, message])
             /*Selects all previous messages, create a new array and
             adding the last message*/
-            /*socket.emit('chat.message', {
+            socket.emit('chat.message', {
                 id: 1,
                 message
             })
-            setMessage('')*/
+            setMessage('')
             setMessage('')
         }
     }
