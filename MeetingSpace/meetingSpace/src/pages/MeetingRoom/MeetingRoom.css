@@ -17,8 +17,7 @@ input {
     margin-left: 20px;
 }
 
-.videoReproduction {
-    background-color: aquamarine;
+.videoReproduction {    
     width: 75vw;
     height: 70vh;
     margin-bottom: 40px;    
