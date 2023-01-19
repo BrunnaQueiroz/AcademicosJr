@@ -41,7 +41,7 @@ export default function Chat () {
 
     return (
         <div className="Chat">
-            <h1>Olá</h1>
+            <h1 className='chatTitle'>Chat</h1>
             <section className="container">
                 <ul className="list">
                     { messages.map(m => (
@@ -55,7 +55,7 @@ export default function Chat () {
                             </span>
                         </li> 
                     )) }                                                                                      
-                    <form className="form" onSubmit={handleFormSubmit}>
+                    <form className="formChat" onSubmit={handleFormSubmit}>
                         <input className="form__field" 
                         placeholder='Type a message'
                         onChange={handleInputChange}

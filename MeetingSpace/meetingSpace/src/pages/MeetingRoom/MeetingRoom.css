@@ -5,10 +5,24 @@ input {
     margin-bottom: 5px;
 }
 
+.videosandChat {
+    display: flex;    
+}
+
 .welcome {
+    background-color: #073255;   
+    display: flex; 
+    width: 100vw;
+    flex-direction: column;
     text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+}
+
+.welcomeText {      
+    color: white;
+    padding-top: 25px;
+    padding-bottom: 20px;    
 }
 
 .allContents {
@@ -20,7 +34,7 @@ input {
 .videoReproduction {    
     width: 75vw;
     height: 70vh;
-    margin-bottom: 40px;    
+    margin-bottom: 20px;
 }
 
 .chatBox{
@@ -28,23 +42,25 @@ input {
     width: 25vw;
     max-width: 290px;
     height: 70vh;
-    margin-top: 175px;
+    margin-top: 155px;
 }
 
 .videosSuggestions {    
     display: flex;      
     width: 74vw;  
-    gap: 12px;    
-    background-color: rgb(128, 128, 128);
+    gap: 12px;        
     padding: 6px;
 }
 
 .firstSuggestion, .secondSuggestion, 
 .thirdSuggestion, .fourthSuggestion {
-    background-color: pink;    
+    background-color: grey;
     width: 18vw;
     gap: 10px;    
-    font-size: 80%;    
+    font-size: 60%; 
+    padding-top: 0.5%;  
+    padding-left: 0.5%;
+    border-radius: 5px; 
 }
 
 video {

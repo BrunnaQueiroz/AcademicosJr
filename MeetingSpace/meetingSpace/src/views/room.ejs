@@ -8,11 +8,10 @@
   <script>
     const ROOM_ID = "<%= roomId %>"
   </script>
-  <script defer src="https://unpkg.com/peerjs@1.2.0/dist/peerjs.min.js"></script>
+  <script defer src="https://unpkg.com/peerjs@1.2.0/dist/peerjs.min.js"></script>  
   <script src="/socket.io/socket.io.js" defer></script>
   <script src="https://www.youtube.com/iframe_api"></script>
-  <!--<script src="script.js" defer></script>-->
-  <script src="../server/script.js" defer></script>
+  <script src="script.js" defer></script>
   <title>Document</title>
   <style>
     #video-grid {
@@ -39,7 +38,6 @@
     <div class="form-group">
       <input class="form-control" type="url" id="url" placeholder="Insert the youtube video link">      
     </div>
-
 
     <button onclick="changeVideo()" class="btn btn-primary">Watch in the same time</button>
     <button onclick="playVideo()" class="btn btn-success">Play</button>   

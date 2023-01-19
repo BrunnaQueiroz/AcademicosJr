@@ -4,6 +4,7 @@ import './Login.css'
 import {db} from './firebase-config'
 import { collection, getDocs, addDoc } from 'firebase/firestore'
 import { Link } from "react-router-dom";
+import image from '../../assets/people.png'
 
 export default function Login() {
 
@@ -31,28 +32,38 @@ export default function Login() {
     }, [])
 
     return (
-        <div className="form">
-            <input required type="text" placeholder="Name" 
-            onChange={(event) => {setNewName(event.target.value)}}/>
-            <input required type="number" placeholder="ID" 
-            onChange={(event) => {setNewRoom(event.target.value)}}/>
-            <Link to={'/Room'}><button onClick={createRoom}> Create Room </button></Link>
-            <div> 
-                {/*{users.map((user) => {                                       
-                    return  (                       
-                    <div> 
-                        <h1> Name: {user.name} </h1> 
-                        <h2> ID: {user.IdRoom} </h2>
-                    </div>)
-                })} */}
+        <div className="allContents">
+            <div className="header">
+                <img src={image} alt="camera image" width={80} height={80}/>
+                <div className="text">
+                    <h1>MySpace</h1>
+                    <p>A space to share with your friends.</p>
+                </div>
             </div>
-            <div className="title">Enjoy a meeting</div>   
-            <div className="datas">
-                <form action="">
-                    <input type="text" name='yourName' placeholder="Your Name"/>
-                    <input type="text" name="id" placeholder="ID" />
-                </form>
-            </div>         
+            <div className="formContainer">                
+                <div className="title">
+                    <h2>MySpace</h2>
+                    <span>A space to share with friends.</span>
+                </div>
+                <div className="form">
+                    <div className="inputs">
+                        <input required type="text" placeholder="Name"
+                        onChange={(event) => {setNewName(event.target.value)}}/>
+                        <input required type="number" placeholder="ID"
+                        onChange={(event) => {setNewRoom(event.target.value)}}/>
+                    </div>
+                    <Link to={'/Room'}><button onClick={createRoom}> Create Room </button></Link>
+                    <div>
+                        {/*{users.map((user) => {
+                            return  (
+                            <div>
+                                <h1> Name: {user.name} </h1>
+                                <h2> ID: {user.IdRoom} </h2>
+                            </div>)
+                        })} */}
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
