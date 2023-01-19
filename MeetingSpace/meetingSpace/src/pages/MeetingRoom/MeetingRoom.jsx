@@ -35,10 +35,9 @@ import Chat from '../../services/Chat'
     return (
         <div className="allContents">    
             <Provider store={store}>
-
                 <section className="allVideoContents">
                     <div className="welcome">
-                        <h1>Welcome, fulana - DEFINITIVA</h1>
+                        <h1>Welcome!</h1>
                         <p>ID da sala: 123456</p>                        
                     </div>
                     <div className="search">
