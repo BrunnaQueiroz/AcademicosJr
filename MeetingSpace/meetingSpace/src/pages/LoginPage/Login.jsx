@@ -38,13 +38,13 @@ export default function Login() {
             onChange={(event) => {setNewRoom(event.target.value)}}/>
             <Link to={'/Room'}><button onClick={createRoom}> Create Room </button></Link>
             <div> 
-                {users.map((user) => {                                       
+                {/*{users.map((user) => {                                       
                     return  (                       
                     <div> 
                         <h1> Name: {user.name} </h1> 
                         <h2> ID: {user.IdRoom} </h2>
                     </div>)
-                })} 
+                })} */}
             </div>
             <div className="title">Enjoy a meeting</div>   
             <div className="datas">
