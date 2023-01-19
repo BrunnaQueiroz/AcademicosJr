@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">  
+  <script>
+    const ROOM_ID = "<%= roomId %>"
+  </script>
+  <script defer src="https://unpkg.com/peerjs@1.2.0/dist/peerjs.min.js"></script>
+  <script src="/socket.io/socket.io.js" defer></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <!--<script src="script.js" defer></script>-->
+  <script src="../server/script.js" defer></script>
+  <title>Document</title>
+  <style>
+    #video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 300px);
+      grid-auto-rows: 300px;
+    }
+    
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="video-grid"></div>
+
+    <div id="player-container" class="container text-center">
+      <div class="embed-responsive-item" id="player"></div>
+    </div>
+
+    <div class="form-group">
+      <input class="form-control" type="url" id="url" placeholder="Insert the youtube video link">      
+    </div>
+
+
+    <button onclick="changeVideo()" class="btn btn-primary">Watch in the same time</button>
+    <button onclick="playVideo()" class="btn btn-success">Play</button>   
+    <button onclick="pauseVideo()" class="btn btn-danger">Pause</button>   
+
+  </div>
+</body>
+</html>
