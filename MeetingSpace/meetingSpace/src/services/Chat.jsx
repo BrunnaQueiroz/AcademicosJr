@@ -4,7 +4,6 @@ import { v4 as uuid } from 'uuid'
 const myId = uuid
 const socket = io('http://localhost3000')
 socket.on('connect', () => console.log('[IO] Connect => A new connection has been estabilished'))
-
 import './Chat.css'
 
 
@@ -40,31 +39,33 @@ export default function Chat () {
         setMessage(event.target.value)
 
     return (
-        <div className="Chat">
+        <section className="chatContainer">
             <h1 className='chatTitle'>Chat</h1>
-            <section className="container">
-                <ul className="list">
-                    { messages.map(m => (
-                        <li 
-                            className="list__item list__item--mine"
-                            key={m.id}>
-                            {/*Modo BEM (Block Element Modifier de nomear classes*/}
-                            <span 
-                            className="message message--mine" >
-                                { m.message }
-                            </span>
-                        </li> 
-                    )) }                                                                                      
-                    <form className="formChat" onSubmit={handleFormSubmit}>
-                        <input className="form__field" 
-                        placeholder='Type a message'
-                        onChange={handleInputChange}
-                        type='text'
-                        value={message}/>                        
-                    </form>       
-                </ul>
-            </section>
-        </div>
+            <div className="Chat">
+                <section className="container">
+                    <ul className="list">
+                        { messages.map(m => (
+                            <li
+                                className="list__item list__item--mine"
+                                key={m.id}>
+                                {/*Modo BEM (Block Element Modifier de nomear classes*/}
+                                <span
+                                className="message message--mine" >
+                                    { m.message }
+                                </span>
+                            </li>
+                        )) }
+                        <form className="formChat" onSubmit={handleFormSubmit}>
+                            <input className="form__field"
+                            placeholder='Type a message'
+                            onChange={handleInputChange}
+                            type='text'
+                            value={message}/>
+                        </form>
+                    </ul>
+                </section>
+            </div>
+        </section>
         
     )
 }
