@@ -54,7 +54,7 @@ input {
 
 .firstSuggestion, .secondSuggestion, 
 .thirdSuggestion, .fourthSuggestion {
-    background-color: grey;
+    background-color: #073255bb;
     width: 18vw;
     gap: 10px;    
     font-size: 60%; 
@@ -63,7 +63,14 @@ input {
     border-radius: 5px; 
 }
 
+.firstSuggestion:hover, .secondSuggestion:hover, 
+.thirdSuggestion:hover, .fourthSuggestion:hover {
+    background-color: #073255;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.1s;
+}
+
 video {
     width: 75vw;
-
 }
