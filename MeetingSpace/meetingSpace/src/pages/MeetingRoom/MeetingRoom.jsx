@@ -45,22 +45,7 @@ import Chat from '../../services/Chat'
                         <div className="search">
                             <input type="text" placeholder='Search'
                             /*onKeyDown={(e) => (this.buscaInput(e))}*//>
-                        </div>
-                       {/*<form action="" id='form'>
-                            <div className="form-group">
-                                <input type="text" id="search" />
-                            </div>
-                            <div className="form-group">
-                                <input type="text" value="Search" />
-                            </div>
-                       </form>
-
-
-                        <div id="videos">
-
-    </div>*/}
-
-
+                        </div>                     
                         <div className="videoReproduction">
                             <video loop autoPlay src={video} height={"100%"}></video>
                         </div>
