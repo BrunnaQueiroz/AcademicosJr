@@ -35,15 +35,14 @@ export default function Login() {
         <div className="allContents">
             <div className="header">
                 <img src={image} alt="camera image" width={80} height={80}/>
-                <div className="text">
+                <div className="imagem">
                     <h1>MySpace</h1>
                     <p>A space to share with your friends.</p>
                 </div>
             </div>
             <div className="formContainer">                
                 <div className="title">
-                    <h2>MySpace</h2>
-                    <span>A space to share with friends.</span>
+                    <p className="create">Create and enjoy your space.</p>
                 </div>
                 <div className="form">
                     <div className="inputs">
