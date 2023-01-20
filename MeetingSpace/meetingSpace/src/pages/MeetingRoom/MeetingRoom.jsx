@@ -43,8 +43,7 @@ import Chat from '../../services/Chat'
                 <section className="videosandChat">                        
                     <section className="allVideoContents">                        
                         <div className="search">
-                            <input type="text" placeholder='Search'
-                            /*onKeyDown={(e) => (this.buscaInput(e))}*//>
+                            <input className='searchInput' type="text" placeholder='Search'                            /*onKeyDown={(e) => (this.buscaInput(e))}*//>
                         </div>                     
                         <div className="videoReproduction">
                             <video loop autoPlay src={video} height={"100%"}></video>
